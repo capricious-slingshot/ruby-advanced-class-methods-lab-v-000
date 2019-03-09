@@ -44,7 +44,6 @@ class Song
   def self.new_from_filename(song)
     metadata = song.gsub(/.mp3/, '').split(" - ")
     new_song = Song.create_by_name(metadata[1])
-    binding.pry
     new_song.artist_name = metadata[0]
   end
 end
