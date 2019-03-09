@@ -46,4 +46,12 @@ class Song
     new_song = Song.new_by_name(metadata[1])
     new_song.artist_name = metadata[0]
   end
+
+  def self.create_from_filename
+    
+  end
+
+  def self.destroy_all
+    
+  end
 end
