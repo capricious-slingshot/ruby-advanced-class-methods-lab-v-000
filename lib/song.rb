@@ -47,8 +47,10 @@ class Song
     new_song.artist_name = metadata[0]
   end
 
-  def self.create_from_filename
-
+  def self.create_from_filename(song_info)
+    metadata = song_info.gsub(/.mp3/, '').split(" - ")
+    new_song = Song.create_by_name(metadata[1])
+    new_song.artist_name = metadata[0]
   end
 
   def self.destroy_all
